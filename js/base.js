@@ -1,4 +1,4 @@
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://funiture-e.onrender.com`;
 const API_INFO = `${API_LINK}/info`;
 let arrayCart = localStorage.getItem("LIST_CART") ? JSON.parse(localStorage.getItem("LIST_CART")) : [];
 async function getData(url) {

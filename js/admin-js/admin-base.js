@@ -1,4 +1,4 @@
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://funiture-e.onrender.com`;
 async function getData(url) {
     let promise = await fetch(url);
     let data = await promise.json();

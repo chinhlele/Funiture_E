@@ -3,7 +3,7 @@ let inputPass = document.querySelector('input[name="pass"]');
 let btn = document.querySelector(".c-btn-2");
 let frameInput = document.querySelector("#s_frame");
 let imgLogin = document.querySelector(".imgLogin");
-const API_LINK = `http://localhost:3000`;
+const API_LINK = `https://funiture-e.onrender.com`;
 async function getData(url) {
     let promise = await fetch(url);
     let data = await promise.json();
