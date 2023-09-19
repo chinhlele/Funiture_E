@@ -1,0 +1,66 @@
+.s-team {
+    margin: 150px 0 50px;
+    .b-title-1 {
+        margin-bottom: 50px;
+    }
+    .s_info {
+        margin-bottom: 80px;
+        &:hover {
+            .s_thumb {
+                .s_social {
+                    bottom: 0;
+                }
+            }
+        }
+        .s_thumb {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            .s_social {
+                position: absolute;
+                bottom: -70px;
+                right: 0;
+                background-color: white;
+                padding: 10px 30px;
+                transition: 0.3s;
+                ul {
+                    @include flexBox(center);
+                    gap: 30px;
+                    li {
+                        a {
+                            transition: 0.3s;
+                            &:hover {
+                                color: $color-primary;
+                            }
+                            i {
+                                font-size: $fs-22;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .s_name {
+            h4 {
+                font-family: $ff-primary;
+                font-size: $fs-36;
+            }
+            .s_job {
+                font-weight: $fw-300;
+                color: $color-tertiary;
+                font-size: $fs-18;
+            }
+        }
+    }
+}
+.p-about {
+    background-image: url("../../img/BG/BG.jpg");
+    .s-img {
+        padding-top: 100px;
+    }
+}
+
+// .row > * {
+//     padding-left: 25px;
+//     padding-right: 25px;
+// }

@@ -1,0 +1,22 @@
+@import "./admin-component/opening";
+@import "./../component/c-input";
+@import "./../component/button";
+
+.s-info {
+    width: 100vw;
+    overflow: hidden;
+    .s_right {
+        padding: 50px;
+        .s_frame {
+            @include flexBox(center);
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 30px;
+            .c-input,
+            .c-input-1 {
+                width: calc(100% / 3 - 23px);
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

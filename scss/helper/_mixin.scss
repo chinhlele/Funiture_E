@@ -1,0 +1,58 @@
+@mixin posAbsolute($direction, $y, $x) {
+    position: absolute;
+
+    @if ($direction == "tl") {
+        top: $y;
+        left: $x;
+    }
+    @if ($direction == "tr") {
+        top: $y;
+        right: $x;
+    }
+    @if ($direction == "centerX") {
+        top: $y;
+        left: $x;
+        transform: translateX(-50%);
+    }
+    @if ($direction == "centerY-40") {
+        top: $y;
+        left: $x;
+        transform: translateY(-40%);
+    }
+    @if ($direction == "centerY-50") {
+        top: $y;
+        left: $x;
+        transform: translateY(-50%);
+    }
+    @if ($direction == "center") {
+        top: $y;
+        left: $x;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@mixin flexBox($align-item: none, $justify: none) {
+    display: flex;
+    @if ($align-item == "center") {
+        align-items: center;
+    }
+    @if ($align-item == "end") {
+        align-items: end;
+    }
+    @if ($justify == "between") {
+        justify-content: space-between;
+    }
+    @if ($justify == "center") {
+        justify-content: center;
+    }
+}
+
+// @mixin flexbox($align-items: null, $justify-content: null) {
+//     display: flex;
+//     @if ($align-items != null) {
+//         align-items: $align-items;
+//     }
+//     @if ($justify-content != null) {
+//         justify-content: $justify-content;
+//     }
+// }

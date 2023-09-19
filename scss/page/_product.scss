@@ -1,0 +1,82 @@
+@import "../component/card";
+@import "../component/nav";
+
+.p-product {
+    background-image: url(../../img/BG/BG.jpg);
+    .s-products {
+        margin: 50px 0;
+        .s_left {
+            .s_classify {
+                font-weight: $fw-200;
+                color: $color-secondary;
+                margin-bottom: 20px;
+            }
+            .c-card {
+                margin-bottom: 50px;
+            }
+            .s_number {
+                @include flexBox(center, between);
+                i {
+                    font-size: $fs-28;
+                    cursor: pointer;
+                    color: $color-tertiary;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $color-primary;
+                        transform: scale(1.2);
+                    }
+                }
+                ul {
+                    @include flexBox(center, center);
+                    gap: 40px;
+                    li {
+                        font-weight: $fw-300;
+                        color: $color-tertiary;
+                        cursor: pointer;
+                        &:hover {
+                            color: $color-primary;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+        .s_right {
+            padding-top: 40px;
+            padding-left: 50px;
+            h4 {
+                color: $color-secondary;
+                font-family: $ff-primary;
+                margin-bottom: 20px;
+            }
+            ul {
+                margin-bottom: 40px;
+                li {
+                    margin-bottom: 10px;
+                    font-weight: $fw-300;
+                    color: $color-tertiary;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $color-primary;
+                        transform: translateX(10px);
+                    }
+                }
+            }
+            .s_color {
+                ul {
+                    li {
+                        @include flexBox(center);
+                        span {
+                            display: block;
+                            width: 10px;
+                            height: 1px;
+                            background-color: $color-tertiary;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

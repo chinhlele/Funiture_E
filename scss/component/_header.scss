@@ -1,0 +1,344 @@
+@import "../component/tab";
+
+.c-header {
+    position: fixed;
+    padding: 0 50px;
+    z-index: 999;
+    width: 100%;
+    transition: 0.3s;
+    &.sticky {
+        background-color: white;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    .c_bot {
+        @include flexBox(center, between);
+        width: 100%;
+        height: 100px;
+        .s_col {
+            @include flexBox(center);
+            height: 100%;
+            gap: 65px;
+            .c_logo {
+                @include flexBox(center);
+                background-color: $color-primary;
+                padding: 0 10px;
+                height: 100%;
+                &.sticky {
+                    background-color: transparent;
+                    #c_symbol {
+                        .c_symbol {
+                            fill: $color-primary;
+                        }
+                    }
+                }
+                #c_symbol {
+                    width: 50px;
+                    .c_symbol {
+                        fill: $color-white;
+                        transition: 0.3s;
+                    }
+                }
+            }
+            .c_nav {
+                height: 100%;
+                ul {
+                    @include flexBox(center);
+                    gap: 50px;
+                    height: 100%;
+                    transition-delay: 0.5s;
+                    &.active {
+                        display: none;
+                    }
+                    > li {
+                        @include flexBox(center);
+                        height: 100%;
+                        &:nth-child(3) {
+                            &:hover {
+                                .c_menu-shop {
+                                    height: 225px;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                        .c_menu-shop {
+                            transition: 0.3s;
+                            position: absolute;
+                            top: 100px;
+                            left: 0;
+                            width: 100%;
+                            height: 0;
+                            background-color: rgb(255, 255, 255);
+                            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+                            overflow: hidden;
+                            .container {
+                                @include flexBox(center, between);
+                            }
+                        }
+                        > a {
+                            position: relative;
+                            font-weight: $fw-300;
+                            transition: 0.3s;
+                            &:hover {
+                                color: $color-primary;
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                            i {
+                                margin-left: 5px;
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                background-color: $color-primary;
+                                width: 0;
+                                height: 1px;
+                                position: absolute;
+                                bottom: -5px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                border-radius: 100px;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                    .xmark {
+                        display: none;
+                    }
+                    @media (max-width: 991px) {
+                        position: absolute;
+                        right: -300px;
+                        top: 0;
+                        display: unset;
+                        background-color: $color-white;
+                        height: 100vh;
+                        padding: 100px 50px;
+                        z-index: 99999999;
+                        min-width: 250px;
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                        transition: 0.5s;
+                        &.run {
+                            right: 0;
+                        }
+                        li {
+                            height: unset;
+                            margin-bottom: 30px;
+                            .c_menu-shop {
+                                right: 0;
+                                top: 0;
+                                text-align: center;
+                                z-index: 999999999999;
+                                .container {
+                                    display: unset;
+                                    .c-item {
+                                        margin: 0 auto;
+                                        padding: 25px 0;
+                                    }
+                                }
+                            }
+                            .c_menu-shop {
+                                transition: 1s;
+                                &.active {
+                                    height: 100vh;
+                                    transition: 1s;
+                                }
+                            }
+                        }
+                        .xmark {
+                            display: block;
+                            font-size: $fs-32;
+                            color: $color-tertiary;
+                        }
+                    }
+                }
+                .c_search {
+                    @include flexBox(center);
+                    opacity: 0;
+                    visibility: hidden;
+                    height: 100%;
+                    width: 100%;
+                    &.active {
+                        transition: 1s;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    i {
+                        font-size: $fs-22;
+                        margin-right: 10px;
+                    }
+                    input {
+                        border: 1px solid transparent;
+                        border-bottom: 1px solid $color-primary;
+                        background-color: transparent;
+                        width: 100%;
+                        font-weight: $fw-300;
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+        .c_icon {
+            @include flexBox(center);
+            gap: 30px;
+            a {
+                &:hover {
+                    i {
+                        color: $color-primary;
+                        transform: scale(1.2);
+                    }
+                }
+                i {
+                    font-size: 21px;
+                    font-weight: $fw-200;
+                    color: $color-secondary;
+                    transition: 0.3s;
+                }
+            }
+            .c_cart {
+                position: relative;
+                display: block;
+                .c_numberCart {
+                    display: block;
+                    @include posAbsolute(tr, -3px, -10px);
+                    @include flexBox(center, center);
+                    background-color: $color-primary;
+                    color: $color-white;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    font-size: $fs-12;
+                    font-weight: $fw-300;
+                }
+            }
+            .search {
+                &.active {
+                    .fa-magnifying-glass {
+                        display: none;
+                    }
+                    .fa-xmark {
+                        display: block;
+                    }
+                }
+                .fa-xmark {
+                    display: none;
+                    font-size: $fs-22;
+                }
+            }
+            .c_bar {
+                @include flexBox(center);
+                %drawLine {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgb(0, 0, 0);
+                    left: 0;
+                    animation: run 0.7s ease-in-out infinite alternate;
+                }
+                width: 25px;
+                height: 30px;
+                cursor: pointer;
+                .c_line {
+                    position: relative;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgb(0, 0, 0);
+                    animation: run 0.7s ease-in-out infinite alternate 400ms;
+                    &::after {
+                        @extend %drawLine;
+                        position: absolute;
+                        top: 7px;
+                        animation-delay: 0.2s;
+                    }
+                    &::before {
+                        @extend %drawLine;
+                        position: absolute;
+                        top: -7px;
+                        animation-delay: 0.6s;
+                    }
+                }
+            }
+        }
+    }
+    .c_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: $color-secondary;
+        color: $color-white;
+        text-align: center;
+        height: 100vh;
+        padding: 100px 100px 50px;
+        position: absolute;
+        top: 0;
+        right: -520px;
+        transition: 0.7s;
+        &.active {
+            right: 0;
+        }
+        i {
+            @include flexBox(center, center);
+            margin: 0 auto 70px;
+            font-size: 30px;
+            font-weight: 100;
+            color: $color-tertiary;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 1s;
+            &:hover {
+                border: 0.5px solid $color-tertiary;
+            }
+        }
+        .c_logo {
+            #c_symbol {
+                width: 100px;
+                .c_symbol {
+                    fill: $color-white;
+                }
+            }
+        }
+        .c_txt {
+            margin: 30px 0;
+            font-weight: $fw-200;
+            color: $color-white;
+            line-height: 22.4px;
+        }
+        a {
+            color: $color-white;
+            font-weight: $fw-200;
+            .c_address {
+                span {
+                    margin-left: 5px;
+                    color: $color-tertiary;
+                    font-weight: $fw-200;
+                }
+            }
+        }
+        ul {
+            li {
+                margin-top: 10px;
+                a {
+                    color: $color-white;
+                    letter-spacing: 3px;
+                    font-size: $fs-14;
+                }
+            }
+        }
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+@keyframes run {
+    0% {
+        width: 25px;
+    }
+
+    100% {
+        width: 10px;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Product</title>
+        <!-- logo -->
+        <link rel="shortcut icon" href="img/logo/symbol.svg" type="image/svg+xml" />
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- trick -->
+        <link rel="stylesheet" href="./trick awesome/css/all.min.css" />
+        <!-- css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="p-product">
+            <!-- header -->
+
+            <div class="c-header"></div>
+
+            <!-- nav -->
+
+            <div class="c-nav">
+                <div class="c_sub-nav">
+                    <div class="container">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <div class="c_line"></div>
+                            <li><a href="javascript:;">Product</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- product -->
+
+            <div class="s-products">
+                <div class="container">
+                    <div class="row">
+                        <div class="s_col col-xl-9 col-lg-8 col-md-8 col-sm-12">
+                            <div class="s_left">
+                                <!-- <div class="s_classify">
+                                    <p class="s_txt">Showing 13-24 of 57 results</p>
+                                </div> -->
+                                <div class="row" id="listProduct"></div>
+                                <div class="s_number">
+                                    <i class="fa-thin fa-arrow-left" id="prev"></i>
+                                    <ul id="list-number"></ul>
+                                    <i class="fa-thin fa-arrow-right" id="next"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s_col col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                            <div class="s_right">
+                                <div class="s_price">
+                                    <h4>FILTER BY PRICE</h4>
+                                    <ul>
+                                        <li data-check="all">All</li>
+                                        <li data-Min="30" data-Max="100">$30 - $100</li>
+                                        <li data-Min="100" data-Max="300">$100 - $300</li>
+                                        <li data-Min="300" data-Max="500">$300 - $500</li>
+                                        <li data-Min="500" data-Max="800">$500 - $800</li>
+                                        <li data-Min="800" data-Max="1000">$800 - $1,000</li>
+                                        <li data-check="over">Over $1,000</li>
+                                    </ul>
+                                </div>
+                                <div class="s_cate">
+                                    <h4>CATEGORIES</h4>
+                                    <ul id="cate">
+                                        <!-- <li>Chairs</li>
+                                        <li>Sofas</li>
+                                        <li>Lamps</li>
+                                        <li>Cabinets</li> -->
+                                    </ul>
+                                </div>
+                                <div class="s_material">
+                                    <h4>MATERIAL</h4>
+                                    <ul></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+
+            <div class="c-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="c_col col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="c_item-1">
+                                <a href="javascript:;">
+                                    <svg id="c_symbol" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29">
+                                        <path
+                                            class="c_symbol"
+                                            d="m30,29h-5.71c0-.39-.07-.77-.2-1.15-.11-.38-.31-.76-.57-1.15-.26-.39-.56-.83-.93-1.29-.37-.48-.8-1.01-1.29-1.58l-7.06-8.6h-3.62c-.07,1.84-.44,3.56-1.12,5.16-.76,1.79-1.77,3.33-3.06,4.65-1.3,1.3-2.79,2.33-4.5,3.08-.63.28-1.29.5-1.95.67v-.71c.27-.1.54-.21.8-.34,1.24-.57,2.33-1.46,3.26-2.65.91-1.18,1.64-2.65,2.17-4.41.46-1.58.73-3.4.76-5.45h-3.37v-.66h3.4v-.06c0-2.38-.29-4.47-.83-6.25-.56-1.78-1.32-3.25-2.29-4.43C2.95,2.68,1.82,1.81.5,1.23c-.17-.07-.33-.14-.5-.2V.22c.66.17,1.29.39,1.9.66,1.77.74,3.29,1.78,4.59,3.11,1.29,1.32,2.3,2.89,3.03,4.69.74,1.81,1.12,3.77,1.12,5.87h0s4.25.01,4.25.01c2.5,0,4.45-.63,5.85-1.86,1.42-1.23,2.12-3.01,2.12-5.32,0-1.28-.23-2.34-.69-3.21-.46-.86-1.06-1.54-1.83-2.06-.77-.52-1.66-.88-2.66-1.11-1.02-.22-2.09-.34-3.22-.34h-3.87v-.67h4.82c1.36,0,2.69.13,3.98.38,1.29.25,2.44.66,3.45,1.23,1.02.57,1.82,1.32,2.43,2.23.61.92.91,2.05.91,3.38,0,1.18-.23,2.21-.7,3.11-.47.91-1.1,1.68-1.9,2.34-.79.66-1.7,1.18-2.72,1.57-1.03.39-2.09.66-3.2.83l6.95,8.18c.43.48.91,1.02,1.46,1.64.56.63,1.1,1.23,1.65,1.82s1.03,1.09,1.44,1.53c.43.42.71.69.86.77h0Z"
+                                        />
+                                    </svg>
+                                </a>
+                                <p class="c_txt">We make interiors infused with the spirit of contemporary design and minimalist philosophies.</p>
+                                <ul>
+                                    <li><a href="javascript:;">INSTAGRAM</a></li>
+                                    <li><a href="javascript:;">FACEBOOK</a></li>
+                                    <li><a href="javascript:;">LINKEDIN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="c_col col-xl-2 col-lg-6 col-md-6 col-sm-12">
+                            <div class="c_item-2">
+                                <p class="c_title">DESIGNERS</p>
+                                <ul>
+                                    <li><a href="javascript:;">Ivanacod</a></li>
+                                    <li><a href="javascript:;">Miss Tome</a></li>
+                                    <li><a href="javascript:;">Iva vap</a></li>
+                                    <li><a href="javascript:;">Ach. France</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="c_col col-xl-2 col-lg-6 col-md-6 col-sm-12">
+                            <div class="c_item-2">
+                                <p class="c_title">MENU</p>
+                                <ul>
+                                    <li><a href="javascript:;">Home</a></li>
+                                    <li><a href="javascript:;">Shop</a></li>
+                                    <li><a href="javascript:;">Product</a></li>
+                                    <li><a href="javascript:;">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="c_col col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                            <div class="c_item-3">
+                                <p class="c_title">SUBCRIBE</p>
+                                <form>
+                                    <input type="email" placeholder="E-mail" required />
+                                    <p class="c_note">* Get all the latest offers & info</p>
+                                    <button class="c-btn-2">
+                                        <span class="c_btn-1">SUBMIT</span>
+                                        <span class="c_btn-2">SUBMIT</span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="c_reserved">© 2023 Qode Interactive, All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        <!-- script -->
+        <script src="js/base.js"></script>
+        <script src="js/product.js"></script>
+    </body>
+</html>

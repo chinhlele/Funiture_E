@@ -1,0 +1,24 @@
+@import "../component/c-input";
+
+.s-log {
+    margin: 100px 0;
+    h1 {
+        font-family: $ff-primary;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .c-input {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    .c-btn-2 {
+        width: 50%;
+        text-align: center;
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

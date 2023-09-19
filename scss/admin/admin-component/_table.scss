@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    margin-top: 50px;
+    thead {
+        tr {
+            th {
+                border: 1px solid $color-secondary;
+                padding: 10px;
+                text-align: center;
+                width: 20%;
+                &:first-child {
+                    width: 5%;
+                }
+                &:last-child {
+                    width: 5%;
+                }
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                border: 1px solid $color-secondary;
+                padding: 10px;
+                text-align: center;
+                img {
+                    width: 100px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

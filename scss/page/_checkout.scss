@@ -1,0 +1,108 @@
+.p-checkout {
+    background-image: url("../../img/BG/BG.jpg");
+    color: $color-secondary;
+    .s-checkout {
+        margin: 100px 0;
+        h3 {
+            font-family: $ff-primary;
+            margin-bottom: 30px;
+        }
+        .s_left {
+            .s_frame {
+                margin-bottom: 30px;
+                label {
+                    font-family: $ff-primary;
+                    font-size: $fs-22;
+                }
+                abbr {
+                    color: $color-primary;
+                }
+                input {
+                    margin-top: 10px;
+                    display: block;
+                    width: 100%;
+                    // padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid $color-primary;
+                    background-color: transparent;
+                    color: $color-tertiary;
+                    font-weight: $fw-300;
+                    font-size: $fs-18;
+                }
+                textarea {
+                    width: 100%;
+                    padding-top: 10px;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $color-primary;
+                    outline: none;
+                    color: $color-tertiary;
+                    font-weight: $fw-300;
+                    font-size: $fs-18;
+                    &::placeholder {
+                        font-size: $fs-18;
+                        font-weight: $fw-300;
+                    }
+                }
+            }
+        }
+        .s_right {
+            table {
+                width: 100%;
+                tr {
+                    th {
+                        font-family: $ff-primary;
+                        font-size: $fs-20;
+                        padding: 20px 0;
+                        padding-right: 20px;
+                    }
+                }
+                tr {
+                    td {
+                        color: $color-tertiary;
+                        font-weight: $fw-300;
+                        font-size: $fs-18;
+                    }
+                }
+                thead {
+                    tr {
+                        th {
+                            width: 50%;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            padding: 20px 0;
+                            padding-right: 20px;
+                        }
+                        border: 0.5px solid $color-tertiary;
+                        border-left: transparent;
+                        border-right: transparent;
+                    }
+                }
+                tfoot {
+                    tr {
+                        &:nth-child(2) {
+                            border: 0.5px solid $color-tertiary;
+                            border-left: transparent;
+                            border-right: transparent;
+                        }
+                        .s_total {
+                            font-weight: $fw-400;
+                        }
+                    }
+                }
+            }
+            .c-btn-2 {
+                width: 100%;
+            }
+        }
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

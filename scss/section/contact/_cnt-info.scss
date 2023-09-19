@@ -1,0 +1,22 @@
+.s-info {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/BG/BG-4.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    .s_frame {
+        // @include flexBox(center, between);
+        padding: 200px 0;
+        color: $color-white;
+        .s_col {
+            margin-bottom: 30px;
+            h3 {
+                font-family: $ff-primary;
+                margin-bottom: 20px;
+            }
+            .s_txt {
+                margin-bottom: 10px;
+                font-size: $fs-20;
+                font-weight: $fw-200;
+            }
+        }
+    }
+}

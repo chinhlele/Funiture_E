@@ -1,0 +1,33 @@
+.c-nav {
+    padding-top: 100px;
+    .c_sub-nav {
+        background-color: $color-white-90;
+        padding: 40px 0;
+    }
+    ul {
+        @include flexBox(center);
+        li {
+            a {
+                font-weight: $fw-300;
+                color: $color-tertiary;
+            }
+        }
+        .c_line {
+            width: 8px;
+            height: 1px;
+            background-color: $color-tertiary;
+            margin: 0 10px;
+        }
+    }
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    padding-left: 0;
+    padding-right: 0;
+}

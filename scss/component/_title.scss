@@ -1,0 +1,46 @@
+.b-title-1 {
+    .b_sub-title {
+        font-family: $ff-secondary, sans-serif;
+        font-size: $fs-46;
+        color: $color-primary;
+        line-height: 0.5;
+        transform: translateX(10px);
+        @media (max-width: 767px) {
+            font-size: $fs-32;
+            text-align: center;
+        }
+    }
+    h3 {
+        font-size: $fs-46;
+        font-family: $ff-primary, sans-serif;
+        line-height: 55.2px;
+        @media (max-width: 767px) {
+            font-size: $fs-32;
+            line-height: 38.4px;
+            text-align: center;
+        }
+    }
+}
+
+.b-title-2 {
+    .b_sub-title {
+        font-family: $ff-secondary, sans-serif;
+        font-size: $fs-46;
+        color: $color-white;
+        line-height: 0.5;
+        @media (max-width: 767px) {
+            font-size: $fs-32;
+            text-align: center;
+        }
+    }
+    h3 {
+        font-size: $fs-46;
+        font-family: $ff-primary, sans-serif;
+        line-height: 55.2px;
+        color: $color-white;
+        @media (max-width: 767px) {
+            font-size: $fs-32;
+            line-height: 38.4px;
+        }
+    }
+}

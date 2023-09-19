@@ -1,0 +1,26 @@
+.c-item {
+    width: calc(100% / 4);
+    text-align: center;
+    padding: 50px 0;
+    .c_point {
+        &:hover {
+            a {
+                color: $color-primary;
+                .c_txt {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        a {
+            i {
+                font-size: 50px;
+                font-weight: 100;
+                margin-bottom: 20px;
+            }
+            .c_txt {
+                transition: 0.3s;
+                font-weight: $fw-300;
+            }
+        }
+    }
+}

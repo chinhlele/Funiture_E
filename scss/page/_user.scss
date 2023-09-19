@@ -1,0 +1,107 @@
+@import "../component/c-input";
+
+.p-user {
+    .s-user {
+        margin: 200px 0;
+        .s_left {
+            ul {
+                li {
+                    font-family: $ff-primary;
+                    font-size: $fs-20;
+                    cursor: pointer;
+                    color: $color-tertiary;
+                    margin-bottom: 20px;
+                    transition: 0.3s;
+                    i {
+                        color: $color-tertiary;
+                    }
+                    &:hover {
+                        color: $color-primary;
+                        i {
+                            color: $color-primary;
+                        }
+                    }
+                    &.active {
+                        border-left: 3px solid $color-primary;
+                        padding-left: 10px;
+                        color: $color-primary;
+                        i {
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .s_right {
+            .s_frame {
+                display: none;
+                &.active {
+                    display: block;
+                }
+                .s_dash {
+                    .s_hello {
+                        color: $color-secondary;
+                        font-weight: $fw-300;
+                        font-size: $fs-32;
+                        font-family: $ff-primary;
+                    }
+                    .s_txt {
+                        color: $color-tertiary;
+                        font-weight: $fw-300;
+                        margin-bottom: 30px;
+                    }
+                    .s_btn {
+                        color: $color-tertiary;
+                        background-color: transparent;
+                        border: none;
+                        font-weight: $fw-300;
+                        &:hover {
+                            color: $color-primary;
+                        }
+                    }
+                }
+                .s_update {
+                    .s_col {
+                        .c-input {
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .c-btn-2 {
+                        width: 97%;
+                    }
+                }
+                .s_order {
+                    .s_time {
+                        margin-bottom: 10px;
+                        font-weight: $fw-300;
+                        font-size: $fs-18;
+                        color: $color-tertiary;
+                    }
+                    table {
+                        width: 100%;
+                        thead {
+                            tr {
+                                th {
+                                    background-color: $color-primary;
+                                    color: $color-white;
+                                    padding: 10px;
+                                    font-family: $ff-primary;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 0.5px solid $color-tertiary;
+                                    padding: 10px;
+                                    font-weight: $fw-300;
+                                    font-size: $fs-18;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

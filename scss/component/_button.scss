@@ -1,0 +1,141 @@
+%afterBtn {
+    content: "";
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    border-radius: 0 0 100% 100%;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease-in-out;
+}
+%btn {
+    height: 60px;
+    width: 215px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+%span {
+    font-size: $fs-14;
+    letter-spacing: 3px;
+}
+%hoverBtn {
+    &::after {
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+    .c_btn-1 {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    .c_btn-2 {
+        transform: translateY(-20px);
+    }
+}
+%btn-1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease-in-out;
+    z-index: 3;
+    opacity: 0;
+    width: 100%;
+}
+%btn-2 {
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+}
+
+// extend--->
+
+.c-btn-1 {
+    @extend %btn;
+    transition: all 0.5s ease-in-out;
+    border: none;
+    background-color: $color-primary;
+
+    &:hover {
+        @extend %hoverBtn;
+    }
+    span {
+        @extend %span;
+    }
+    .c_btn-1 {
+        @extend %btn-1;
+        color: $color-primary;
+    }
+
+    .c_btn-2 {
+        @extend %btn-2;
+        color: $color-white;
+    }
+
+    &::after {
+        @extend %afterBtn;
+        background-color: $color-white;
+    }
+}
+
+// btn-2--->
+
+.c-btn-2 {
+    @extend %btn;
+    transition: all 0.5s ease-in-out;
+    border: 1.5px solid $color-primary;
+    background-color: transparent;
+
+    &:hover {
+        @extend %hoverBtn;
+    }
+    span {
+        @extend %span;
+    }
+    .c_btn-1 {
+        @extend %btn-1;
+        color: $color-white;
+    }
+
+    .c_btn-2 {
+        @extend %btn-2;
+        color: $color-primary;
+    }
+
+    &::after {
+        @extend %afterBtn;
+        background-color: $color-primary;
+    }
+}
+
+// btn-3--->
+
+.c-btn-3 {
+    @extend %btn;
+    transition: all 0.5s ease-in-out;
+    border: 1.5px solid $color-white;
+    background-color: transparent;
+
+    &:hover {
+        @extend %hoverBtn;
+    }
+    span {
+        @extend %span;
+    }
+    .c_btn-1 {
+        @extend %btn-1;
+        color: $color-primary;
+    }
+
+    .c_btn-2 {
+        @extend %btn-2;
+        color: $color-white;
+    }
+
+    &::after {
+        @extend %afterBtn;
+        background-color: $color-white;
+    }
+}

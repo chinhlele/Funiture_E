@@ -1,0 +1,154 @@
+@import "../component/card";
+
+.p-detail_product {
+    overflow: hidden;
+    .s-detail_product {
+        position: relative;
+        padding: 100px 0;
+        .s_top {
+            .s_thumb {
+                .s_sub-img {
+                    width: 48%;
+                    padding: 0 30px;
+                    img {
+                        cursor: pointer;
+                        &:nth-child(2) {
+                            margin: 30px 0;
+                        }
+                    }
+                }
+            }
+            .s_star {
+                @include flexBox(center);
+                .s_sku {
+                    margin-right: 15px;
+                    font-size: $fs-20;
+                    font-weight: $fw-300;
+                    color: $color-tertiary;
+                }
+                ul {
+                    @include flexBox(center);
+                    li {
+                        margin-right: 3px;
+                        color: $color-tertiary;
+                    }
+                }
+            }
+            h1 {
+                font-family: $ff-primary;
+                font-size: $fs-60;
+            }
+            .s_des {
+                color: $color-tertiary;
+                font-weight: $fw-300;
+                font-size: $fs-18;
+                line-height: 25.2px;
+                margin: 0 0 40px;
+            }
+            .s_price {
+                @include flexBox(center);
+                gap: 50px;
+                margin-bottom: 40px;
+                .s_frame {
+                    .s_name {
+                        text-transform: uppercase;
+                        color: $color-tertiary;
+                        font-weight: $fw-300;
+                    }
+                    .s_number {
+                        font-size: $fs-24;
+                        color: $color-secondary;
+                    }
+                }
+                .s_quantity {
+                    i {
+                        font-size: $fs-24;
+                        cursor: pointer;
+                        &:hover {
+                            color: $color-primary;
+                            font-weight: 500;
+                        }
+                    }
+                    input {
+                        width: 100px;
+                        padding: 5px;
+                        text-align: center;
+                        margin: 0 20px;
+                        background-color: transparent;
+                        border: 0.5px solid $color-tertiary;
+                    }
+                }
+            }
+            .s_add {
+                .c-btn-2 {
+                    width: 100%;
+                }
+            }
+            .s_description {
+                margin-top: 40px;
+                .s_item {
+                    &.active {
+                        .s_txt {
+                            height: 120px;
+                        }
+                        i {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                    border: 0.5px solid $color-tertiary;
+                    border-left: transparent;
+                    border-right: transparent;
+                    border-bottom: transparent;
+                    padding: 15px 0;
+
+                    &:nth-child(2) {
+                        border: transparent;
+                    }
+                    .s_frame {
+                        @include flexBox(center, between);
+                        cursor: pointer;
+                        .s_title {
+                            font-size: $fs-18;
+                            font-weight: $fw-300;
+                            color: $color-secondary;
+                        }
+                    }
+                    .s_txt {
+                        color: $color-tertiary;
+                        font-weight: $fw-300;
+                        height: 0;
+                        overflow: hidden;
+                        transition: height 0.3s ease;
+                    }
+                    i {
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+        .s_popup {
+            position: absolute;
+            right: -140px;
+            top: 0;
+            background-color: $color-primary;
+            color: white;
+            padding: 10px 30px;
+            &.active {
+                right: 0;
+            }
+        }
+    }
+}
+
+.s-related {
+    margin-bottom: 100px;
+    .b-title-1 {
+        padding: 0 10px;
+        margin-bottom: 30px;
+    }
+    .s_card {
+        .s_col {
+            margin-bottom: 30px;
+        }
+    }
+}

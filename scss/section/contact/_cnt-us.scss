@@ -1,0 +1,37 @@
+.p-contact {
+    background-image: url("../../img/BG/BG.jpg");
+    .s-contact {
+        .s_us {
+            margin: 100px 0;
+            .s_frame {
+                .c-input {
+                    padding: 0;
+                    margin-bottom: 30px;
+                }
+                textarea {
+                    padding: 0 18px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $color-primary;
+                    outline: none;
+                    font-size: $fs-20;
+                    font-weight: $fw-300;
+                    &::placeholder {
+                        font-size: $fs-20;
+                        font-weight: $fw-300;
+                        color: $ff-tertiary;
+                    }
+                }
+                .c-btn-2 {
+                    width: 100%;
+                    margin-top: 20px;
+                    .c_btn-1,
+                    .c_btn-2 {
+                        font-size: $fs-14;
+                    }
+                }
+            }
+        }
+    }
+}

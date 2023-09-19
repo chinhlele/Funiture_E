@@ -1,0 +1,167 @@
+.s-slogan {
+    margin: 100px 0;
+    .s_top {
+        @include flexBox(center, between);
+        .s_icon {
+            i {
+                font-size: 40px;
+                color: $color-primary;
+                @media (max-width: 400px) {
+                    display: none;
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            padding-left: 20px;
+        }
+    }
+    .s_bot {
+        padding-left: 120px;
+        position: relative;
+        .s_col {
+            @include flexBox(center);
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            .s_item {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                &:not(.active) {
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                }
+                .s_des {
+                    margin: 30px 0;
+                    font-size: $fs-22;
+                    font-weight: $fw-200;
+                    line-height: 30.8px;
+                }
+                .s_author {
+                    @include flexBox(center, between);
+                    .s_left {
+                        .s_name {
+                            text-transform: uppercase;
+                            letter-spacing: 3px;
+                            font-weight: $fw-400;
+                            color: $color-secondary;
+                        }
+                        .s_work {
+                            font-weight: $fw-300;
+                            color: $color-tertiary;
+                        }
+                    }
+                }
+            }
+        }
+        .s_right {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            i {
+                display: block;
+                cursor: pointer;
+                font-size: 25px;
+                transition: 0.3s;
+                &:hover {
+                    color: $color-primary;
+                    transform: scale(1.2);
+                }
+            }
+            @media (max-width: 767px) {
+                right: 40px;
+            }
+        }
+        @media (max-width: 767px) {
+            padding-left: 20px;
+        }
+    }
+    .s_img {
+        margin-top: 40px;
+        .s_thumb {
+            &:nth-child(odd) {
+                transform: translateY(30px);
+            }
+        }
+        .s_popup {
+            @include flexBox(center, center);
+            z-index: 999999;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            &.active {
+                display: block;
+            }
+            .s_fame {
+                @include flexBox(center, center);
+                gap: 40px;
+                height: 100%;
+                .s_thumb {
+                    img {
+                        width: 800px;
+                        border-radius: 10px;
+                    }
+                    .s_txt {
+                        color: $color-tertiary;
+                        font-weight: $fw-200;
+                        font-size: $fs-20;
+                        cursor: pointer;
+                        text-decoration: underline;
+                        width: 60px;
+                        margin: 40px auto 0;
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+                i {
+                    color: $color-tertiary;
+                    font-size: $fs-32;
+                    cursor: pointer;
+                    &:hover {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes next1 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -100%;
+    }
+}
+@keyframes next2 {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}
+@keyframes prev2 {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}

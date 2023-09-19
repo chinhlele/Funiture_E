@@ -1,0 +1,128 @@
+.p-cart {
+    background-image: url("../../img/BG/BG.jpg");
+    .s-cart {
+        margin: 100px 0;
+        .s_left {
+            table {
+                width: 100%;
+                thead {
+                    tr {
+                        th {
+                            padding: 30px 0;
+                            font-weight: $fw-300;
+                            font-family: $ff-primary;
+                            font-size: $fs-20;
+                            border-bottom: 0.5px solid $color-tertiary;
+                            &:nth-child(2) {
+                                padding-left: 30px;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        border-bottom: 0.5px solid $color-tertiary;
+                        td {
+                            width: 15%;
+                            padding: 40px 0;
+                            &:nth-child(2) {
+                                width: 30%;
+                            }
+                            &:last-child {
+                                .s_frame {
+                                    @include flexBox(center, between);
+                                    padding-right: 50px;
+                                    i {
+                                        font-size: $fs-24;
+                                        cursor: pointer;
+                                        color: $color-tertiary;
+                                        transition: 0.3s;
+                                        &:hover {
+                                            transform: scale(1.2);
+                                        }
+                                    }
+                                }
+                            }
+                            img {
+                                // width: 200px;
+                                margin: 0 auto;
+                            }
+                            .s_name {
+                                font-size: $fs-24;
+                                font-family: $ff-primary;
+                                padding-left: 30px;
+                            }
+                            .s_price {
+                                color: $color-tertiary;
+                                font-size: $fs-18;
+                                font-weight: $fw-300;
+                            }
+                            .s_quantity {
+                                i {
+                                    font-size: $fs-22;
+                                    cursor: pointer;
+                                    &:hover {
+                                        color: $color-primary;
+                                        font-weight: $fw-400;
+                                    }
+                                }
+                                input {
+                                    width: 50px;
+                                    text-align: center;
+                                    padding: 5px;
+                                    margin: 0 10px;
+                                    background-color: transparent;
+                                    border: 0.5px solid $color-tertiary;
+                                }
+                            }
+                            .s_main-price {
+                                color: $color-tertiary;
+                                font-weight: $fw-300;
+                                font-size: $fs-18;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .s_right {
+            margin-top: 100px;
+            padding: 0 20px;
+            h2 {
+                font-family: $ff-primary;
+                margin-bottom: 20px;
+                color: $color-secondary;
+            }
+            table {
+                width: 100%;
+                tr {
+                    th {
+                        padding: 20px 0;
+                        width: 20%;
+                        font-family: $ff-primary;
+                        font-size: $fs-20;
+                        color: $color-secondary;
+                    }
+                    td {
+                        width: 80%;
+                        font-weight: $fw-300;
+                        color: $color-tertiary;
+                        font-size: $fs-18;
+                    }
+                    .s_price {
+                        font-weight: $fw-400;
+                    }
+                    &:nth-child(2) {
+                        border: 1px solid $color-tertiary;
+                        border-left: transparent;
+                        border-right: transparent;
+                    }
+                }
+            }
+            .c-btn-2 {
+                text-transform: uppercase;
+                width: 100%;
+            }
+        }
+    }
+}

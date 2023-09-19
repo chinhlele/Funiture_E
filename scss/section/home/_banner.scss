@@ -1,0 +1,174 @@
+.s-banner {
+    position: relative;
+    height: 100vh;
+    .s_inner-circle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .s_circle {
+        @include posAbsolute(centerY-50, 50%, 75px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        z-index: 10;
+        .s_title {
+            color: $color-tertiary;
+            font-weight: $fw-300;
+        }
+        .s_cir {
+            background-color: $color-tertiary;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            &.active {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            &::after {
+                content: "";
+                @include posAbsolute(center, 50%, 50%);
+                border: 0.5px solid $color-tertiary;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+        .fa-thin {
+            color: $color-tertiary;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 20px;
+            &:hover {
+                font-weight: $fw-500;
+                color: $color-primary;
+            }
+        }
+        @media (max-width: 414px) {
+            display: none;
+        }
+    }
+    .s_slide {
+        @include posAbsolute(tl, 0, 0);
+        object-fit: cover;
+        width: 100%;
+        opacity: 0;
+        transition: 1.5s;
+        overflow-x: hidden;
+        &.active {
+            opacity: 1;
+            .s_content {
+                animation: ctnChange 1.3s linear;
+                h1 {
+                    animation: txtChange 1.2s linear;
+                }
+                .s_text {
+                    animation: txtChange 1.4s linear;
+                }
+                .s_price {
+                    animation: txtChange 1.6s linear;
+                }
+                .c-btn-1 {
+                    animation: txtChange 1.8s linear;
+                }
+
+                @media (max-width: 414px) {
+                    animation: unset;
+                }
+            }
+        }
+        .s_thumb {
+            img {
+                height: 100vh;
+                object-fit: cover;
+            }
+        }
+        .s_content {
+            @include posAbsolute(centerY-40, 40%, 185px);
+            z-index: 99;
+            .s_sub-title {
+                font-size: $fs-46;
+                font-family: $ff-secondary, sans-serif;
+                color: $color-primary;
+                line-height: 0.4;
+                transform: translateX(10px);
+            }
+            h1 {
+                font-size: $fs-82;
+                font-family: $ff-primary, sans-serif;
+                margin-bottom: 20px;
+            }
+            .s_text {
+                font-size: $fs-20;
+                font-weight: $fw-300;
+                color: $color-tertiary;
+                line-height: 28px;
+                margin-bottom: 20px;
+                width: 55%;
+            }
+            .s_price {
+                @include flexBox(center);
+                gap: 20px;
+                margin-bottom: 40px;
+                .s_price-1 {
+                    font-size: $fs-32;
+                    color: $color-secondary;
+                    font-weight: $fw-500;
+                }
+                .s_price-2 {
+                    color: $color-tertiary;
+                    text-decoration: line-through;
+                    font-weight: $fw-200;
+                    padding: 0 10px;
+                }
+            }
+            @media (max-width: 768px) {
+                .s_sub-title {
+                    font-size: $fs-36;
+                }
+                h1 {
+                    font-size: $fs-60;
+                }
+                .s_text {
+                    font-size: $fs-18;
+                }
+            }
+            @media (max-width: 414px) {
+                top: 60%;
+                left: 50%;
+                transform: translate(-50%, -60%);
+            }
+        }
+    }
+}
+
+@keyframes ctnChange {
+    0% {
+        opacity: 0;
+        top: 60%;
+        transform: translateY(-60%);
+    }
+    100% {
+        opacity: 1;
+        top: 40%;
+        transform: translateY(-40%);
+    }
+}
+
+@keyframes txtChange {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
